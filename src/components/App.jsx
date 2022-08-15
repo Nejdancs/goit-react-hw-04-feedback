@@ -1,4 +1,5 @@
-import { useState, useReducer } from 'react';
+import { useReducer } from 'react';
+// import { useState} from 'react';
 import { Section, Statistics, Notification, FeedbackOptions } from 'components';
 
 const initialValue = { good: 0, neutral: 0, bad: 0 };
