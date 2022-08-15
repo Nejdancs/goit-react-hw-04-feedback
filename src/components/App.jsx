@@ -5,19 +5,8 @@ import { Section, Statistics, Notification, FeedbackOptions } from 'components';
 const initialValue = { good: 0, neutral: 0, bad: 0 };
 
 function reducer(state, action) {
-  switch (action.type) {
-    case 'good':
-      return { ...state, good: state.good + 1 };
-
-    case 'neutral':
-      return { ...state, neutral: state.neutral + 1 };
-
-    case 'bad':
-      return { ...state, bad: state.bad + 1 };
-
-    default:
-      throw new Error('Type not found');
-  }
+  console.log(action.type);
+  return { ...state, [action.type]: state[action.type] + 1 };
 }
 
 // useReducer
